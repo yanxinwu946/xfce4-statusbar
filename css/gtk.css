@@ -1,0 +1,36 @@
+/* 胶囊样式：背景画在内容容器上，padding 画在子元素上。
+   没有可见内容（例如 VPN 断开时只有空 label）时容器宽度为 0，胶囊自然消失。
+   通用选择器，新增 genmon 插件自动生效。 */
+.genmon_plugin {
+  background-color: transparent;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.genmon_imagebox {
+  background-color: rgba(122, 162, 247, 0.16);
+  border-radius: 12px;
+}
+
+/* 可点击文本（<txtclick>）：genmon 用按钮代替 label */
+.genmon_imagebox > button.genmon_valuebutton {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+/* 图标按钮：与后面的文本按钮共用一个胶囊，只在两端留 12px */
+.genmon_imagebox > button.genmon_imagebutton {
+  padding-left: 12px;
+  padding-right: 2px;
+}
+
+/* 纯文本 label（无 <txtclick>）：空文本时宽度为 0，胶囊自动隐藏 */
+.genmon_imagebox > label.genmon_value {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.genmon_imagebox > image.genmon_image {
+  padding-left: 0;
+  padding-right: 0;
+}
